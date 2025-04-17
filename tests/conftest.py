@@ -264,7 +264,7 @@ def user_response_data():
 def login_request_data():
     return {"username": "john_doe_123","email":"john.doe.test@example.com",  "password": "SecurePassword123!"}
 
-
+@pytest.fixture
 def user_token():
      return create_access_token(
         data={
@@ -273,6 +273,7 @@ def user_token():
             }
         )
      
+@pytest.fixture
 def admin_token():
      return create_access_token(
         data={
@@ -281,6 +282,7 @@ def admin_token():
             }
         )
 
+@pytest.fixture
 def manager_token():
      return create_access_token(
         data={
