@@ -277,7 +277,7 @@ def admin_token():
      return create_access_token(
         data={
             "sub": "john_doe_Admin",
-            "role": UserRole.ADMIN
+            "role": UserRole.ADMIN.value
             }
         )
 
@@ -285,6 +285,6 @@ def manager_token():
      return create_access_token(
         data={
             "sub": "john_doe_manager",
-            "role": UserRole.MANAGER
+            "role": UserRole.MANAGER.value
             }
         )
