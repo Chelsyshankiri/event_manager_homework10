@@ -2,6 +2,102 @@
 
 Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Developer and a student in software engineering, you are embarking on an exciting journey to contribute to our project aimed at developing a secure, robust REST API that supports JWT token-based OAuth2 authentication. This API serves as the backbone of our user management system and will eventually expand to include features for event management and registration.
 
+## Submissions:
+ 
+ ### Learnings from the Assignments
+ Through this assignment, I have got the valuable details about technical and collabarative aspects about the software development. 
+ 
+ On the techical side, I have tried identifying the issues and resolving them in the project so that it helped me deepen the understanding the concepts like API debugging, API design and testing. Gave me an experience of working as a QA Analyst by pin-pointing problems by running the test suite and checking what are the test cases that are failing. Understanding the dependencies and architecture of the project.
+ 
+ On Implementing fixes it often will be involved researching best practices by ensuring problem solving and coding skills. Linking the commits to the issues has taught me the importance of the issue and commit traceability and clear documentation in the code repos.
+ 
+ The challenges I faced while doing this assignment have taught me the value of systematic debugging, effective error fixing and well structured version control. These challenges has increased my foundationa knowledge and also provided more clear point of view of collabaration importance.
+ 
+ ### Project Image deployed to docker hub
+ [DockerHub Repository Link](https://hub.docker.com/repository/docker/chelsy688/event_manager/general)
+ 
+ ![dockerhub deployment image](./docker_hub.png)
+ 
+ ### Test Coverage
+ 
+   Added Testcases to increase the test coverage upto 95% on the Pytest coverage run. 
+   Coverage report afer the successful workflow run.
+   ```bash
+   ---------- coverage: platform linux, python 3.10.12-final-0 ----------
+Name                                       Stmts   Miss  Cover
+--------------------------------------------------------------
+app/__init__.py                                0      0   100%
+app/database.py                               16      3    81%
+app/dependencies.py                           39      3    92%
+app/main.py                                   16      3    81%
+app/models/user_model.py                      49      0   100%
+app/routers/__init__.py                        0      0   100%
+app/routers/user_routes.py                    84     40    52%
+app/schemas/link_schema.py                     8      0   100%
+app/schemas/pagination_schema.py              20      1    95%
+app/schemas/token_schema.py                    7      0   100%
+app/schemas/user_schemas.py                   67      1    99%
+app/services/__init__.py                       0      0   100%
+app/services/email_service.py                 18      1    94%
+app/services/jwt_service.py                   18      2    89%
+app/services/user_service.py                 164     11    93%
+app/utils/__init__.py                          0      0   100%
+app/utils/api_description.py                   3      0   100%
+app/utils/link_generation.py                  24      0   100%
+app/utils/nickname_gen.py                      7      0   100%
+app/utils/security.py                         21      0   100%
+app/utils/smtp_connection.py                  27      0   100%
+app/utils/template_manager.py                 25      0   100%
+settings/__init__.py                           0      0   100%
+settings/config.py                            41      0   100%
+tests/__init__.py                              0      0   100%
+tests/conftest.py                            134      2    99%
+tests/test_api/test_users_api.py             126      0   100%
+tests/test_conftest.py                        51      0   100%
+tests/test_dependencies.py                    43      0   100%
+tests/test_email.py                            7      0   100%
+tests/test_link_generation.py                 39      0   100%
+tests/test_models/test_user_model.py          85      0   100%
+tests/test_schemas/__init__.py                 0      0   100%
+tests/test_schemas/test_user_schemas.py       49      0   100%
+tests/test_security.py                        43      0   100%
+tests/test_services/test_user_service.py     131      5    96%
+--------------------------------------------------------------
+TOTAL                                       1362     72    95%
+   ```
+ 
+ ### Issues Addressed:
+   Issue #7: [UUID is not passed correctly](https://github.com/Chelsyshankiri/event_manager_homework10/issues/7)
+  
+   Issue: Instead of passing UUID that will be unique for response data.Passing a unique-id-string which is a string as its own
+   
+   Resolution: Fixed the issue by ensuring that the UUID was correctly passed in while creating response data. After testing it is confirmed that it is working fine.
+ 
+   Issue #4: [SMTPServerDisconnected : Connection unexpectedly closed running email functionalities](https://github.com/Chelsyshankiri/event_manager_homework10/issues/4)
+ 
+   Issue: SMTPServerDisconnected: Connection unexpectedly closed running email functionalities
+ 
+   Resolution: I have added the environment varibales of username and password for this and passed the same in the workflow code to make the SMTP connection stable. Test cases have shown that after doing this the connection is stable and the test cases are passed.
+ 
+   Issue #3 [In Tests, Missing fixtures for user admin and manager tokens](https://github.com/Chelsyshankiri/event_manager_homework10/issues/3)
+ 
+   Issue: Missing Fixtures: user_token, admin_token, and manager_token in Tests.
+ 
+   Resolution: Added the code for the missing fixtures like admin_token, user_token and manager_token that are the cause for failure in multiple test cases. After the running the test suite we have ensured that all the token dependent code is working fine.
+ 
+   Issue #2 [PydanticValidationError on LoginRequest](https://github.com/Chelsyshankiri/event_manager_homework10/issues/2)
+ 
+   Issue: pydantic ValidationError for LoginRequest
+ 
+   Resolution: There are few validation errors that are identified and I have corrected the schema for LoginRequest to align with expected fields. Updated the input validation logic and added unit tests to cover edge cases.
+ 
+   Issue #1 [UserData Fetch is failing](https://github.com/Chelsyshankiri/event_manager_homework10/issues/1)
+ 
+   Issue: UserData fetch Failure
+ 
+   Resolution: A few details like nickname,username and UUID are not correctly fetched and passed to add or get the data which in result makes the model formation wrong.
+
+
 ## Assignment Objectives
 
 1. **Familiarize with REST API functionality and structure**: Gain hands-on experience working with a REST API, understanding its endpoints, request/response formats, and authentication mechanisms.
