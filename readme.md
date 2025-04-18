@@ -7,11 +7,11 @@ Welcome to the Event Manager Company! As a newly hired Software QA Analyst/Devel
  ### Learnings from the Assignments
  Through this assignment, I have got the valuable details about technical and collabarative aspects about the software development. 
  
- On the techical side, I have tried identifying the issues and resolving them in the project so that it helped me deepen the understanding the concepts like API debugging, API design and testing. Gave me an experience of working as a QA Analyst by pin-pointing problems by running the test suite and checking what are the test cases that are failing. Understanding the dependencies and architecture of the project.
- 
- On Implementing fixes it often will be involved researching best practices by ensuring problem solving and coding skills. Linking the commits to the issues has taught me the importance of the issue and commit traceability and clear documentation in the code repos.
- 
- The challenges I faced while doing this assignment have taught me the value of systematic debugging, effective error fixing and well structured version control. These challenges has increased my foundationa knowledge and also provided more clear point of view of collabaration importance.
+On the technical side, working on this project helped me strengthen my understanding of concepts like API debugging, design, and testing. I got hands-on experience acting like a QA Analyst—running the test suite, identifying failing test cases, and tracing issues within the project. This process also helped me better understand the project's dependencies and architecture.
+
+When it came to fixing those issues, I often had to research best practices, which really sharpened both my problem-solving and coding skills. Linking commits to specific issues taught me the importance of maintaining traceability and clear documentation in a codebase.
+
+Overall, the challenges I faced during this assignment taught me how valuable systematic debugging, effective error resolution, and proper version control are. It also gave me a stronger foundation and a clearer perspective on the importance of collaboration in software development.
  
  ### Project Image deployed to docker hub
  [DockerHub Repository Link](https://hub.docker.com/repository/docker/chelsy688/event_manager/general)
